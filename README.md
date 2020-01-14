@@ -6,6 +6,7 @@ Simple login and registration in php
   - Create a database in phpmyadmin
   - Import "user.sql" from database folder
   - Go to *your-website/login*
+  - Insert the correct data in *login/config.php*
   - Try with default user or create a new one 
   
 *Default user:
