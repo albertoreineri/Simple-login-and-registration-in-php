@@ -31,7 +31,7 @@
         <input name="password" id="password" placeholder="" type="password">
 
         <!-- Login Button -->
-        <button class="btn btn-primary btn-lg" type="submit">Login</button>
+        <button type="submit">Login</button>
 
       </form>
       <!-- /Login form -->

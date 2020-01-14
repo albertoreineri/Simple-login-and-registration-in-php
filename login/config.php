@@ -4,5 +4,5 @@
 $servername = "localhost";
 $username = "root";
 $passworddb = "";
-$dbname = "albertoreineri_orange";
+$dbname = "php_login";
 $conn = new mysqli($servername, $username, $passworddb, $dbname);
