@@ -1,43 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+define("PAGE", "Login");
+include("layouts/header.php");
+?>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Login</title>
-</head>
+<div class="container">
+  <div class="box">
 
+    <?php
+    if (isset($_GET['user']) && $_GET['user'] == 'yes') {
+    ?>
+      <div class="box welcome">
+        <h1>New user created!</h1>
+        <p>Now you can Log In</p>
+      </div>
+    <?php
+    }
+    ?>
 
-<body>
-  <div class="container">
-    <div class="box">
+    <h1>Simple php login</h1>
 
-      <h1>Simple php login</h1>
+    <!-- Login form -->
+    <form class="" action="utility/login.php" method="POST">
 
-      <!-- Login form -->
-      <form class="" action="access.php" method="POST">
+      <!-- Action -->
+      <input type="hidden" name="action" value="login">
 
-        <!-- Action -->
-        <input type="hidden" name="action" value="login">
+      <!-- Email or Username -->
+      <label for="email">Email or Username</label>
+      <input autofocus name="email" type="text">
 
-        <!-- Email or Username -->
-        <label for="email">Email or Username</label>
-        <input autofocus name="email" type="text">
+      <!-- Password -->
+      <label for="password">Password</label>
+      <input name="password" id="password" placeholder="" type="password">
 
-        <!-- Password -->
-        <label for="password">Password</label>
-        <input name="password" id="password" placeholder="" type="password">
+      <!-- Login Button -->
+      <button type="submit">Login</button>
 
-        <!-- Login Button -->
-        <button type="submit">Login</button>
+    </form>
+    <!-- /Login form -->
 
-      </form>
-      <!-- /Login form -->
-
-    </div>
   </div>
-</body>
+</div>
 
-</html>
+<?php
+include("layouts/footer.php");
+?>
