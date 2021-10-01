@@ -19,6 +19,7 @@ $rows = $q->rowCount();
 if ($rows > 0) {
     while ($row = $q->fetch()) {
         header("location: ../error.php?error=Email or Username already register!");
+        die();
     }
 }
 
